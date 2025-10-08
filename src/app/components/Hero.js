@@ -30,7 +30,7 @@ export default function Hero() {
             I'm a software developer specializing in building (and occasionally designing) 
             exceptional digital experiences. Currently, I'm focused on building accessible, 
             human-centered products at{' '}
-            <a href="#" className="text-green-500 hover:underline transition">D Global GrowthField Limited</a>.
+            <a href="https://dglobalgrowthfield.com" target='_blank' className="text-green-500 hover:underline transition">D Global GrowthField Limited</a>.
           </p>
         </ScrollReveal>
         

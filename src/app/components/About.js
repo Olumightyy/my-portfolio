@@ -20,7 +20,7 @@ export default function About() {
       <div className="max-w-4xl mx-auto w-full">
         <ScrollReveal>
           <h2 className="numbered-heading text-gray-100">
-            About Me
+            ABOUT ME
           </h2>
         </ScrollReveal>
         

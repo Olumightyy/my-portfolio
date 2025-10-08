@@ -6,30 +6,33 @@ import ScrollReveal from './animations/ScrollReveal';
 export default function Experience() {
   const jobs = [
     {
-      company: 'Company One',
-      title: 'Senior Developer',
-      duration: 'Jan 2022 - Present',
-      url: 'https://company1.com',
+      company: 'Wragby Business Solutions',
+      title: 'Software Engineering Intern',
+      duration: 'May 2023 - October 2023',
+      url: 'https://www.wragbysolutions.com',
       responsibilities: [
-        'Write modern, performant, maintainable code for a diverse array of client and internal projects',
-        'Work with a variety of different languages, platforms, frameworks such as JavaScript, TypeScript, React, Next.js',
-        'Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis',
+        'Contributed to the development of enterprise software solutions that improved workflow efficiency and business operations.',
+        'Partnered with cross-functional teams to deliver scalable, secure, and user-friendly applications tailored to client needs.',
+        'Supported the integration of APIs and third-party services, enabling seamless business process automation.',
+        'Participated in code reviews, testing, and debugging to ensure high-quality software delivery.',
+        'Developed and maintained features for enterprise applications using HTML, CSS, JavaScript, and Python.'
       ]
     },
     {
-      company: 'Company Two',
-      title: 'Full Stack Developer',
-      duration: 'Jun 2020 - Dec 2021',
-      url: 'https://company2.com',
+      company: 'D Global GrowthField Limited',
+      title: 'Frontend Developer',
+      duration: 'May 2025 - Present',
+      url: 'https://dglobalgrowthfield.com',
       responsibilities: [
-        'Developed and maintained code for in-house and client websites primarily using HTML, CSS, JavaScript, and React',
-        'Manually tested sites in various browsers and mobile devices to ensure cross-browser compatibility',
+        'Designed, built, and maintained responsive websites using HTML, CSS, JavaScript, and modern frameworks, ensuring seamless performance across devices.',
+        'Supported integration of digital tools and ensured smooth functionality of web-based platforms.',
         'Collaborated with designers to translate mockups into functional web applications',
+        'Supported deployment and version control with Git/GitHub while following Agile development practices.',
       ]
     },
     {
-      company: 'Company Three',
-      title: 'Junior Developer',
+      company: 'Google Developers Club',
+      title: 'Frontend Developer',
       duration: 'Jan 2019 - May 2020',
       url: 'https://company3.com',
       responsibilities: [
