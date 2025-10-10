@@ -9,7 +9,7 @@ export default function Contact() {
       <div className="max-w-3xl w-full">
         <div className="text-center mb-12">
           <ScrollReveal>
-            <p className="text-green-500 font-mono mb-5 uppercase tracking-widest text-sm">What's Next?</p>
+            <p className="text-green-500 font-mono mb-5 uppercase tracking-widest text-sm">What&apos;s Next?</p>
           </ScrollReveal>
           
           <ScrollReveal delay={100}>
@@ -20,8 +20,8 @@ export default function Contact() {
           
           <ScrollReveal delay={200}>
             <p className="text-gray-400 text-lg mb-8 leading-relaxed max-w-2xl mx-auto">
-              I'm currently looking for new opportunities and my inbox is always open. 
-              Whether you have a question or just want to say hi, I'll try my best to 
+              I&apos;m currently looking for new opportunities and my inbox is always open. 
+              Whether you have a question or just want to say hi, I&apos;ll try my best to 
               get back to you!
             </p>
           </ScrollReveal>

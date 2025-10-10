@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image'; // ✅ ADD THIS
 import ScrollReveal from './animations/ScrollReveal';
 
 export default function Projects() {
@@ -33,7 +34,7 @@ export default function Projects() {
   return (
     <section id="projects" className="min-h-screen px-6 py-24">
       <div className="max-w-5xl mx-auto">
-        {/* Section Title - NO NUMBERING, UPPERCASE */}
+        {/* Section Title */}
         <ScrollReveal>
           <h2 className="text-4xl font-bold mb-16 flex items-center uppercase tracking-wider">
             <span className="gradient-text">Development Projects</span>
@@ -50,20 +51,16 @@ export default function Projects() {
                   index % 2 === 0 ? '' : 'md:dir-rtl'
                 }`}
               >
-                {/* Project Image with gradient border */}
+                {/* Project Image */}
                 <div className="md:col-span-7 relative">
                   <div className="relative h-64 md:h-96 rounded-lg overflow-hidden border-2 border-green-500/20 bg-green-500/5 hover:border-green-500/40 transition-all">
-                    <div className="w-full h-full bg-zinc-900 rounded-lg flex items-center justify-center">
-                      <img 
-                        src={project.image} 
-                        alt={project.title}
-                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                        onError={(e) => {
-                          e.target.style.display = 'none';
-                          e.target.parentElement.innerHTML = '<span class="text-gray-600 font-mono">Project Screenshot</span>';
-                        }}
-                      />
-                    </div>
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 700px"
+                    />
                     {/* Green overlay */}
                     <div className="absolute inset-0 bg-green-500/20 mix-blend-multiply group-hover:opacity-0 transition-opacity rounded-lg"></div>
                   </div>
@@ -78,12 +75,12 @@ export default function Projects() {
                     </a>
                   </h3>
                   
-                  {/* Description Box with gradient border */}
+                  {/* Description Box */}
                   <div className="bg-zinc-900/90 backdrop-blur-sm rounded-lg p-6 mb-4 shadow-xl border border-gray-800 hover:border-green-500/40 transition">
                     <p className="text-gray-400">{project.description}</p>
                   </div>
 
-                  {/* Tech Stack with colors */}
+                  {/* Tech Stack */}
                   <ul className={`flex flex-wrap gap-3 font-mono text-sm mb-4 ${
                     index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'
                   }`}>
@@ -94,16 +91,16 @@ export default function Projects() {
                     ))}
                   </ul>
 
-                  {/* Links with hover effects */}
+                  {/* Links */}
                   <div className={`flex gap-4 ${
                     index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'
                   }`}>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-500 transition transform hover:scale-110">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-500 transition transform hover:scale-110" aria-label="GitHub Repository">
                       <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
                       </svg>
                     </a>
-                    <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-500 transition transform hover:scale-110">
+                    <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-500 transition transform hover:scale-110" aria-label="Live Demo">
                       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>

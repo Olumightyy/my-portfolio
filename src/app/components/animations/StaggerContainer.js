@@ -1,48 +1,50 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react'; // ✅ ADD React
+import { motion } from 'framer-motion';
 
-export default function StaggerContainer({ children, className = '', staggerDelay = 100 }) {
+export default function StaggerContainer({ children, staggerDelay = 100 }) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
 
   useEffect(() => {
+    const currentRef = ref.current;
+    
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.1 }
+      {
+        threshold: 0.1,
+      }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
 
   return (
-    <div ref={ref} className={className}>
-      {Array.isArray(children)
-        ? children.map((child, index) => (
-            <div
-              key={index}
-              className={`transition-all duration-700 ease-out ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-              }`}
-              style={{ transitionDelay: isVisible ? `${index * staggerDelay}ms` : '0ms' }}
-            >
-              {child}
-            </div>
-          ))
-        : children}
+    <div ref={ref}>
+      {isVisible &&
+        React.Children.map(children, (child, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * (staggerDelay / 1000) }}
+          >
+            {child}
+          </motion.div>
+        ))}
     </div>
   );
 }

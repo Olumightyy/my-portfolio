@@ -1,8 +1,8 @@
 export default function Footer() {
   const socialLinks = [
-    { name: 'GitHub', url: 'https://github.com/yourusername' },
-    { name: 'LinkedIn', url: 'https://linkedin.com/in/yourusername' },
-    { name: 'Twitter', url: 'https://twitter.com/yourusername' },
+    { name: 'GitHub', url: 'https://github.com/Olumightyy' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/olumide-adepoju-662901296' },
+    { name: 'Twitter', url: 'https://X.com/ibepeofficial' },
   ];
 
   return (
@@ -24,10 +24,10 @@ export default function Footer() {
       
       {/* Credit with gradient */}
       <p className="gradient-text font-mono text-sm font-bold uppercase tracking-wider">
-        Designed & Built by Your Name
+        Designed & Built by Calex Digital
       </p>
       <p className="text-slate-600 text-xs mt-2">
-        © 2024 All rights reserved.
+        © 2025 All rights reserved.
       </p>
     </footer>
   );

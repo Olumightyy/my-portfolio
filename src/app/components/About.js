@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image'; // ✅ ADD THIS
 import ScrollReveal from './animations/ScrollReveal';
 import StaggerContainer from './animations/StaggerContainer';
 
@@ -82,10 +83,12 @@ export default function About() {
                 
                 {/* Image Container */}
                 <div className="relative w-full h-full rounded overflow-hidden">
-                  <img 
-                    src="/portrait.png" 
-                    alt="Olumide - Frontend Developer" 
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-300"
+                  <Image
+                    src="/portrait.png"
+                    alt="Olumide - Frontend Developer"
+                    fill
+                    className="object-cover grayscale hover:grayscale-0 transition-all duration-300"
+                    sizes="256px"
                   />
                   {/* Green Overlay */}
                   <div className="absolute inset-0 bg-green-500/20 mix-blend-multiply group-hover:bg-transparent transition-all duration-300"></div>
