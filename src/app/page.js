@@ -3,8 +3,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
-// import OtherProjects from './components/OtherProjects';
-import AiGallery from './components/AiGallery';  // ✅ Capital AI
+import AIGallery from './components/AIGallery';  // ✅ Capital AI
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import SocialSidebar from './components/SocialSidebar';
@@ -25,8 +24,7 @@ export default function Home() {
         <About />
         <Experience />
         <Projects />
-        <OtherProjects />
-        <AiGallery />  {/* ✅ Capital AI */}
+        <AIGallery />  {/* ✅ Capital AI */}
         <Contact />
       </main>
       
