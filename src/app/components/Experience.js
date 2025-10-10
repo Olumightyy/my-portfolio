@@ -14,7 +14,7 @@ export default function Experience() {
         'Contributed to the development of enterprise software solutions that improved workflow efficiency and business operations.',
         'Partnered with cross-functional teams to deliver scalable, secure, and user-friendly applications tailored to client needs.',
         'Supported the integration of APIs and third-party services, enabling seamless business process automation.',
-        'Participated in code reviews, testing, and debugging to ensure high-quality software delivery.',
+        'Participated in code reviews, testing, and debugging to ensure the delivery of high-quality software.',
         'Developed and maintained features for enterprise applications using HTML, CSS, JavaScript, and Python.'
       ]
     },
