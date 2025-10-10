@@ -1,7 +1,7 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Your Name - Developer Portfolio',
+  title: 'Olumide Portfolio',
   description: 'Software developer specializing in building exceptional digital experiences',
 }
 

@@ -36,7 +36,7 @@ export default function Projects() {
         {/* Section Title - NO NUMBERING, UPPERCASE */}
         <ScrollReveal>
           <h2 className="text-4xl font-bold mb-16 flex items-center uppercase tracking-wider">
-            <span className="gradient-text">My Projects</span>
+            <span className="gradient-text">Development Projects</span>
             <div className="ml-6 h-1 bg-gradient-to-r from-green-500/50 to-transparent flex-grow max-w-md rounded-full"></div>
           </h2>
         </ScrollReveal>

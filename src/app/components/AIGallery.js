@@ -52,31 +52,49 @@ export default function AIGallery() {
         {/* Header */}
         <ScrollReveal>
           <h2 className="numbered-heading text-gray-100">
-            AI DESIGN GALLERY
+            AI Design Gallery
           </h2>
         </ScrollReveal>
 
-        <ScrollReveal>
-            <div className="mb-20">
-                <h2 className="text-5xl md:text-7xl font-bold text-gray-100 mb-4">
-                  AI Design
-             </h2>
-                 <p className="text-gray-500 font-mono text-sm">
-             Prompt engineering / Visual creativity / Zero templates
-                </p>
+        {/* Stats Cards */}
+        <div className="grid md:grid-cols-3 gap-6 mt-8 mb-12">
+          <ScrollReveal delay={100}>
+            <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-6 hover:border-green-500/50 transition-colors">
+              <p className="text-3xl font-bold text-green-500 mb-2">100%</p>
+              <p className="text-gray-400 text-sm">AI-Generated</p>
             </div>
+          </ScrollReveal>
+          <ScrollReveal delay={200}>
+            <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-6 hover:border-green-500/50 transition-colors">
+              <p className="text-3xl font-bold text-green-500 mb-2">0</p>
+              <p className="text-gray-400 text-sm">Templates Used</p>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={300}>
+            <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-6 hover:border-green-500/50 transition-colors">
+              <p className="text-3xl font-bold text-green-500 mb-2">{images.length}</p>
+              <p className="text-gray-400 text-sm">Unique Pieces</p>
+            </div>
+          </ScrollReveal>
+        </div>
+
+        {/* Short Tagline */}
+        <ScrollReveal delay={400}>
+          <p className="text-gray-500 font-mono text-sm max-w-2xl">
+            Prompt engineering meets visual creativity. Zero templates, infinite possibilities.
+          </p>
         </ScrollReveal>
 
         {/* Gallery Grid */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {images.map((image, index) => (
             <motion.div
               key={image.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-100px' }}
-              transition={{ 
-                duration: 0.5, 
+              transition={{
+                duration: 0.5,
                 delay: index * 0.1,
                 ease: [0.22, 1, 0.36, 1]
               }}
@@ -119,16 +137,27 @@ export default function AIGallery() {
 
         {/* Tech Stack Used */}
         <ScrollReveal delay={200}>
-          <div className="mt-16 text-center">
-            <p className="text-gray-500 text-sm font-mono mb-4">TOOLS USED</p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {['Midjourney', 'DALL-E', 'Stable Diffusion', 'ChatGPT'].map((tool) => (
-                <span
-                  key={tool}
-                  className="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-gray-400 text-sm hover:border-green-500 hover:text-green-500 transition-colors"
+          <div className="mt-20 bg-zinc-900/30 border border-zinc-800 rounded-2xl p-8">
+            <p className="text-gray-400 text-sm font-mono mb-6 text-center">
+              CREATED WITH AI TOOLS
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {[
+                { name: 'Midjourney', desc: 'Image Generation' },
+                { name: 'DALL-E', desc: 'AI Art' },
+                { name: 'Stable Diffusion', desc: 'Custom Models' },
+                { name: 'ChatGPT', desc: 'Prompt Engineering' },
+              ].map((tool) => (
+                <motion.div
+                  key={tool.name}
+                  whileHover={{ y: -3 }}
+                  className="text-center group cursor-default"
                 >
-                  {tool}
-                </span>
+                  <p className="text-green-500 font-bold mb-1 group-hover:text-green-400 transition-colors">
+                    {tool.name}
+                  </p>
+                  <p className="text-gray-600 text-xs">{tool.desc}</p>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -157,6 +186,7 @@ export default function AIGallery() {
               <button
                 onClick={() => setSelectedImage(null)}
                 className="absolute -top-12 right-0 text-white hover:text-green-500 transition-colors z-10"
+                aria-label="Close preview"
               >
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -176,7 +206,7 @@ export default function AIGallery() {
               </div>
 
               {/* Image Info */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-6">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-6 rounded-b-lg">
                 <span className="text-green-500 text-xs font-mono uppercase tracking-wider mb-2 block">
                   {selectedImage.category}
                 </span>

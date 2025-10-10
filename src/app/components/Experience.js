@@ -48,11 +48,12 @@ export default function Experience() {
   return (
     <section id="experience" className="min-h-screen px-6 py-24 flex items-center">
       <div className="max-w-3xl mx-auto w-full">
-        <ScrollReveal>
-          <h2 className="numbered-heading text-gray-100">
-            Where I've Worked
-          </h2>
-        </ScrollReveal>
+       {/* Header */}
+    <ScrollReveal>
+      <h2 className="numbered-heading text-gray-100 text-4xl md:text-5xl">
+        Work Experience
+      </h2>
+    </ScrollReveal>
 
         <ScrollReveal delay={100}>
           <div className="flex flex-col md:flex-row gap-8 mt-12">
