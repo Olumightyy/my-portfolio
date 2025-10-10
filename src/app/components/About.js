@@ -6,12 +6,12 @@ import StaggerContainer from './animations/StaggerContainer';
 export default function About() {
   const technologies = [
     'JavaScript (ES6+)',
-    'React',
-    'Node.js',
-    'Next.js',
+    'React & Next.js',
     'TypeScript',
     'Tailwind CSS',
-    'Python',
+    'AI Design Tools',
+    'Prompt Engineering',
+    'Node.js',
     'PostgreSQL'
   ];
 
@@ -30,13 +30,26 @@ export default function About() {
             <div className="space-y-4 text-gray-400 leading-relaxed">
               <p>
                 Hello! I'm <span className="text-green-500 font-semibold">Olumide</span>, 
-                a Computer Engineering graduate and Frontend Developer passionate about building modern, responsive, and user-friendly web applications
+                a Frontend Developer who brings together clean code and stunning visuals. 
+                What sets me apart? I blend modern web development with AI-powered design to create 
+                digital experiences that are both technically excellent and visually unforgettable.
               </p>
               <p>
-                With strong expertise in React.js, JavaScript (ES6+), TypeScript, and component-based architecture, I focus on creating digital solutions that enhance usability, drive engagement, and support business growth.
+                With expertise in <span className="text-green-500">React.js, TypeScript, and Next.js</span>, 
+                I build responsive, performance-optimized applications. But I don't stop at functionality—I 
+                leverage AI tools to create unique brand visuals, custom graphics, and design elements that 
+                make websites stand out in a sea of generic templates.
               </p>
               <p>
-                Over the past few years, I’ve worked across internships, professional roles, academic research, and personal projects, each of which has helped me refine my technical skills and problem-solving mindset. From contributing to enterprise applications at Wragby Business Solutions, to developing responsive business tools 
+                From contributing to enterprise applications at <span className="text-green-500">Wragby Business Solutions</span> to 
+                developing business tools at <span className="text-green-500">D Global GrowthField Ltd</span>, I've 
+                continuously pushed the boundaries of what a frontend developer can deliver. Whether it's architecting 
+                scalable React applications or generating AI-enhanced brand assets, I focus on creating solutions that 
+                drive real business value.
+              </p>
+              <p>
+                Currently exploring the intersection of development, AI, and creative design—building a 
+                personal brand around <span className="text-green-500">tech innovation and aesthetic excellence</span>.
               </p>
               
               {/* Tech Stack */}
@@ -73,12 +86,9 @@ export default function About() {
                     }}
                   />
                 </div>
-                Green Overlay
+                {/* Green Overlay */}
                 <div className="absolute inset-0 bg-green-500/20 mix-blend-multiply group-hover:bg-transparent transition-all"></div>
               </div>
-              
-              {/* Decorative Border */}
-              {/* <div className="absolute top-6 left-6 w-full h-full border-2 border-green-500/30 rounded -z-10 group-hover:top-4 group-hover:left-4 transition-all"></div> */}
             </div>
           </ScrollReveal>
         </div>

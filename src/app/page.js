@@ -9,6 +9,7 @@ import SocialSidebar from './components/SocialSidebar';
 import EmailSidebar from './components/EmailSidebar';
 import LoadingScreen from './components/LoadingScreen';
 import BackToTop from './components/BackToTop';
+import AiGallery from './components/AiGallery';
 
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
         <About />
         <Experience />
         <Projects />
+        <AiGallery />
         <Contact />
       </main>
       
@@ -29,6 +31,7 @@ export default function Home() {
       <EmailSidebar />
       <SocialSidebar />
       <LoadingScreen />
+      
     </>
   );
 }

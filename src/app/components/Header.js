@@ -9,7 +9,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
-  const activeSection = useScrollSpy(['home', 'about', 'experience', 'projects', 'contact']);
+  const activeSection = useScrollSpy(['home', 'about', 'experience', 'projects', 'ai-design', 'contact']);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +23,7 @@ export default function Header() {
     { name: 'About', id: 'about' },
     { name: 'Experience', id: 'experience' },
     { name: 'Projects', id: 'projects' },
+    { name: 'AI Design', id: 'ai-design' },
     { name: 'Contact', id: 'contact' },
   ];
 
