@@ -59,7 +59,7 @@ export default function Header() {
 
           {/* Resume Button */}
           <a
-            href="/resume.pdf"
+            href="https://drive.google.com/file/d/1oWYb40eLoTZexdO-9iBQCyxwGr4LB0xW/view?usp=drive_link" target='_blank'
             className="hidden md:block px-5 py-2.5 border-2 border-green-500 text-green-500 rounded-lg hover:bg-green-500/10 transition text-sm font-mono uppercase tracking-wider btn-glow"
           >
             Resume
